@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+use App\Http\Controllers\InstructionController;
+Route::group(['prefix' => 'instruction'], function () {
+    Route::get('/', [InstructionController::class, 'index']);
+    Route::get('/type', [InstructionController::class, 'type']);
+});
