@@ -22,4 +22,17 @@ use App\Http\Controllers\InstructionController;
 Route::group(['prefix' => 'instruction'], function () {
     Route::get('/', [InstructionController::class, 'index']);
     Route::get('/type', [InstructionController::class, 'type']);
+    Route::get('/vendor', [InstructionController::class, 'vendor']);
+    Route::get('/invoice', [InstructionController::class, 'invoice']);
+    Route::get('/customer', [InstructionController::class, 'customer']);
+    Route::get('/po', [InstructionController::class, 'po']);
+});
+
+use App\Http\Controllers\CostDetailController;
+Route::group(['prefix' => 'cost'], function () {
+    Route::get('/', [InstructionController::class, 'index']);
+    Route::get('/type', [InstructionController::class, 'type']);
+    Route::get('/uom', [InstructionController::class, 'uom']);
+    Route::get('/currency', [InstructionController::class, 'currency']);
+    Route::get('/chargeto', [InstructionController::class, 'chargeto']);
 });
