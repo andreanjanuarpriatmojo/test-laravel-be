@@ -30,9 +30,9 @@ Route::group(['prefix' => 'instruction'], function () {
 
 use App\Http\Controllers\CostDetailController;
 Route::group(['prefix' => 'cost'], function () {
-    Route::get('/', [InstructionController::class, 'index']);
-    Route::get('/type', [InstructionController::class, 'type']);
-    Route::get('/uom', [InstructionController::class, 'uom']);
-    Route::get('/currency', [InstructionController::class, 'currency']);
-    Route::get('/chargeto', [InstructionController::class, 'chargeto']);
+    Route::get('/', [CostDetailController::class, 'index']);
+    Route::get('/type', [CostDetailController::class, 'type']);
+    Route::get('/uom', [CostDetailController::class, 'uom']);
+    Route::get('/currency', [CostDetailController::class, 'currency']);
+    Route::get('/chargeto', [CostDetailController::class, 'chargeto']);
 });
